@@ -1,1 +1,1 @@
-# mima-landing
+# Mima Landing Page
