@@ -1,0 +1,27 @@
+.carousel{
+    width: 900px;
+    background-color: red;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+.carts-wrap{
+    display: flex;
+    position: absolute;
+    .cart {
+    width: 200px;
+    height: 17.857em;
+    padding: 37px 20px 27px;
+    margin: 0 1em;
+    border-radius: 10.8px;
+    border: solid 0.8px #2f3b75;
+    background-color: #0f194d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ffffff;
+    overflow: auto;
+    }
+}    
