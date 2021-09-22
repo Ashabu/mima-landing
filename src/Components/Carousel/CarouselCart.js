@@ -5,7 +5,7 @@ const CarouselCart = (props) => {
     console.log(props.left)
 
     return (
-        <div className='cart' style={{ position: 'absolute', left: props.left }}>
+        <div className='cart' >
             <p>{title}</p>
             <p>{desc}</p>
 

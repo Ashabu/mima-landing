@@ -3,12 +3,13 @@
     background-color: red;
     margin: auto;
     position: relative;
-    overflow: hidden;
+    overflow-x: auto;
     height: 400px;
+    display: flex;
 }
 .carts-wrap{
     display: flex;
-    position: absolute;
+
     .cart {
     width: 200px;
     height: 17.857em;
@@ -22,6 +23,5 @@
     align-items: center;
     justify-content: flex-start;
     color: #ffffff;
-    overflow: auto;
     }
 }    

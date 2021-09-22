@@ -253,5 +253,67 @@
   .con-4 {
 
   }
+
+  .con-5 {
+    background: #3b3e40;
+    padding: 40px 0;
+    background-image: url('./Assets/images/descritption/tiger.png'), url('./Assets/images/descritption/pig.png'), url('./Assets/images/descritption/bg.png');
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: left 0 top 130px,right 0 bottom 130px,50%;
+    background-size: 400px,400px,cover;
+
+    .container {
+      width: 100%;
+      max-width: 1600px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  .con-6 {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+
+    .container {
+      width: 100%;
+      max-width: 1600px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      color: #fff;
+
+      .faq-item-wrap {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+
+        .faq-item {
+          background: #3b3e40;
+          transition: all 0.3s;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+
+        .faq-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 0 20px 0;
+          font-style: normal;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 2.4rem;
+          line-height: 1.45;
+      
+        }
+      }
+    }
+  }
 }
 

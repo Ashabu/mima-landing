@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import './carousel.scss';
 import CarouselCart from "../../Components/Carousel/CarouselCart";
 
@@ -48,10 +48,26 @@ const Testimonials = [
 
 
 const cardW = 300;
-
+let xt = 0;
 
 const Carousel = (props) => {
     const [clickCount, setCklickCount] = useState(0);
+    const t = document.getElementsByClassName('carousel')
+    useEffect(() => {
+        // console.log('x', t)
+        // for (let x = 0; x < cardW; x++) {
+        //     console.log(x)
+        //     t[0].scrollLeft += x;
+        // }
+
+        let rt = setInterval(() => {
+            xt++;
+            if (xt % cardW === 0) { clearInterval(rt); return }
+            t[0].scrollLeft += xt;
+
+        }, 50);
+
+    }, [clickCount])
 
     const fn = (index) => {
         return cardW * index - (clickCount * cardW);
