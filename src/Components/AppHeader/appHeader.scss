@@ -1,0 +1,252 @@
+header {
+    position: relative;
+    z-index: 100;
+    background-color: #1a1a1a;
+
+    .app-header {
+        min-height: 70px;
+        grid-template-columns: .5fr 1fr .5fr;
+        grid-gap: 20px;
+        gap: 20px;
+        padding: 0;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+
+        .app-logo {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: underline;
+
+                span {
+                    img {
+                        display: block;
+                        width: auto;
+                        height: auto;
+                        max-width: 100%;
+                        max-height: 50%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        .app-mid-content {
+            display: none;
+            .app-menu-content {
+                .app-menu {
+                    width: 100%;
+                    grid-gap: 10px;
+                    display: grid;
+                    grid-auto-columns: auto;
+                    grid-auto-flow: column;
+                    align-items: center;
+
+                    .app-menu-1 {
+                        padding: 0 2px;
+                        display: flex;
+                        .app-menu-item-wrap {
+                           
+                            margin-right: 40px;
+
+                            .app-menu-item {
+                                a {
+                                    font-style: normal;
+                                    color: #ffffff;
+                                    font-weight: normal;
+                                    font-size: 1.6rem;
+                                    line-height: 1.45;
+                                    font-size: 1rem;
+                                    display: flex;
+                                    align-items: center;
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+
+        .app-login-signup {
+            display: none;
+
+            button {
+               height: 40px;
+               display: grid;
+               grid-column-gap: 5px;
+               grid-template-columns: auto 1fr auto;
+               align-items: center;
+               min-width: 110px;
+               padding: 5px 20px;
+               box-shadow: none;
+               border-radius: 10px;
+               outline: none;
+               box-sizing: border-box;
+               overflow: hidden;
+               transition: all 0.3s;
+               cursor: pointer;
+                    
+                &:first-child {
+                    border: 2px solid  #40a850;
+                    background: transparent;
+
+                    &:hover {
+                        background-color: #40a85033;
+                    }
+                }
+
+                &:last-child {
+                   border: 2px solid transparent;
+                   background: #40a850;
+
+                   &:hover {
+                       background-color: #66b973;
+                       box-shadow: none;
+                       border: 2px solid #5ec26d;
+                   }
+                }
+
+                .btn-text {
+                    font-style: normal;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                    line-height: 1.45;
+                    grid-column: 2;
+                    text-transform: none;
+                    text-transform: initial;
+                }
+            }
+        }
+
+        .for-mobile {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1630px) {
+    header {
+        .app-header {
+            min-height: 100px;
+            padding: 0 40px;
+
+            .app-mid-content {
+                .app-menu-content {
+                    .app-menu {
+                        grid-gap: 40px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1420px) {
+    header {
+        .app-header {
+
+            .app-mid-content {
+                .app-menu-content {
+                    .app-menu {
+                        grid-gap: 20px;
+
+                        .app-menu-1 {
+                            .app-menu-item {
+                                a {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1366px) {
+    header {
+        .app-header {
+            .app-mid-content {
+                display: block;
+            }
+          
+            .app-login-signup {
+                button {
+                    &:first-child {
+                        padding: 5px 20px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+      header {
+          .app-header {
+            max-width: 1920px;
+            grid-template-columns: auto auto minmax(0,1fr) auto auto;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            
+            .app-login-signup {
+                display: grid;
+                grid-auto-columns: auto;
+                grid-auto-flow: column;
+                grid-gap: 20px;
+                align-items: center;
+                justify-content: flex-end;
+                button {
+                    &:first-child {
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+
+            .for-mobile {
+                display: none;
+                align-items: center;
+                justify-content: center;
+            }
+          }
+}
+
+@media (min-width: 1024px) {
+    header {
+        .app-header {
+            .app-mid-content {
+                .app-menu-content {
+                    .app-menu {
+                        .app-menu-1 {
+                            .app-menu-item {
+                                a {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

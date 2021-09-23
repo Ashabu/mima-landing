@@ -1,0 +1,31 @@
+.con-5 {
+    background: #3b3e40;
+    padding: 40px 0;
+    background-image: url('../../Assets/images/descritption/tiger.png'), url('../../Assets/images/descritption/pig.png'), url('../../Assets/images/descritption/bg.png');
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: left 0 top 130px,right 0 bottom 130px,50%;
+    background-size: 400px,400px,cover;
+
+    .why-us-wrap {
+        margin: 0 auto;
+        .aff-content {
+            width: 100%;
+            margin: 40px auto;
+            text-align: center;
+            font-style: normal;
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 1.6rem;
+            line-height: 1.45;
+
+            &:first-child {
+                margin-top: 0;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+  }

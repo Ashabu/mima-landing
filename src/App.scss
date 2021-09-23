@@ -1,38 +1,5 @@
 .App {
-  .app-header {
-    max-width: 1920px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #1a1a1a;
 
-    .action-btns {
-      display: flex;
-
-      button {
-          height: 40px;
-          min-width: 110px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 10px;
-          border: 2px solid #40a850;;
-          box-shadow: none;
-          color: #ffffff;
-          cursor: pointer;
-
-          &:first-child {
-            background: transparent;
-            margin-right: 20px;
-          }
-
-          &:last-child {
-            background-color: #40a850;
-          }
-      }
-    }
-  }
 
   .con-1 {
     
@@ -87,233 +54,97 @@
       
     }
   }
-
-  .con-2 {
-    padding: 40px 0;
-    background-color: #1a1a1a;
-
-    .benefits-wrap {
-      display: flex;
-      justify-content: center;
-
-      .benefit-item {
-        padding: 0 10px;
-        grid-template-rows: 54px auto;
-        position: relative;
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 1fr;
-        text-align: center;
-
-        &::after {
-          opacity: 1;
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 0;
-          display: block;
-          width: 2px;
-          height: 50%;
-          background: hsla(0,0%,100%,.5);
-          transform: translate(50%,-50%);
-        }
-      }
-
-    
-    
-        .item-icon{
-        height: 54px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-          img {
-            max-height: 100%;
-            vertical-align: middle;
-          }
-        }
-
-        .item-content {
-          align-self: baseline;
-            span {
-              font-style: normal;
-              color: #fff;
-              font-weight: 700;
-              font-size: 1rem;
-              line-height: 1.45;
-              display: inline-block;
-              max-width: 20ch;
-            }
-        }
-      }
-
-  }
-
-  .con-3 {
-    background-color: #1a1a1a;
-    padding: 0 0 40px;
-    .commission-section {
-      max-width: 1170px;
-      margin: auto;
-     
-
-      .aff-content {
-        color: #ffffff;
-        &:first-child {
-          margin-top: 0;
-        }
-        p {
-          &:last-child {
-            max-width: 108ch;
-            margin: 0 auto 10px;
-            a{
-              height: 40px;
-              grid-column-gap: 5px;
-              grid-template-columns: auto 1fr auto;
-              align-items: center;
-              min-width: 110px;
-              padding: 5px 20px;
-              background: #40a850;
-              box-shadow: none;
-              border: 2px solid transparent;
-              border-radius: 10px;
-              display: inline-grid;
-              min-width: 180px;
-              text-decoration: none;
-
-              span {
-                font-style: normal;
-                color: #fff;
-                font-weight: 700;
-                font-size: 1.1rem;
-                line-height: 1.45;
-                grid-column: 2;
-                text-transform: none;
-              }
-            }
-          }
-        }
-        h3 {
-          margin: 0;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 1.8rem;
-          line-height: 1.45;
-        }
-        p{
-          max-width: 55ch;
-          margin: 0 auto;
-        }
-
-        width: 100%;
-        margin: 40px auto;
-        text-align: center;
-      }
-
-      .digits-wrap {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-gap: 20px;
-        justify-content: center;
-
-        .digits-item {
-          display: grid;
-          grid-gap: 15px;
-          padding: 30px;
-          text-align: center;
-          background: #3b3e40;
-          border-radius: 10px;
-
-          .digits-main {
-            font-size: 4.2rem;
-            font-weight: 700;
-            line-height: 1;
-            color: #ffffff;
-          }
-
-          .digits-separator {
-            width: 100%;
-            height: 2px;
-            border-radius: 100px;
-            background: hsla(0,0%,100%,.5);
-          }
-
-          .digits-description{
-            font-style: normal;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.4rem;
-            line-height: 1.45;
-          }
-        }
-      }
-    }
-  }
-
+ 
   .con-4 {
 
   }
 
-  .con-5 {
-    background: #3b3e40;
-    padding: 40px 0;
-    background-image: url('./Assets/images/descritption/tiger.png'), url('./Assets/images/descritption/pig.png'), url('./Assets/images/descritption/bg.png');
-    background-repeat: no-repeat,no-repeat,no-repeat;
-    background-position: left 0 top 130px,right 0 bottom 130px,50%;
-    background-size: 400px,400px,cover;
+  
 
-    .container {
-      width: 100%;
-      max-width: 1600px;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
-      color: #fff;
-    }
-  }
+  
 
-  .con-6 {
-    background-color: #1a1a1a;
-    padding: 40px 0;
+  
 
-    .container {
-      width: 100%;
-      max-width: 1600px;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
-      color: #fff;
-
-      .faq-item-wrap {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: 1fr;
-
-        .faq-item {
-          background: #3b3e40;
-          transition: all 0.3s;
-          overflow: hidden;
-          border-radius: 10px;
-        }
-
-        .faq-header {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 0 20px 0;
-          font-style: normal;
-          color: #ffffff;
-          font-weight: bold;
-          font-size: 2.4rem;
-          line-height: 1.45;
-      
-        }
-      }
-    }
+  .con-8 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
   }
 }
+
+
+@media (min-width: 375px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 345px;
+      }
+}
+
+@media (min-width: 480px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 450px;
+      }
+
+}
+
+@media (min-width: 560px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 530px;
+      }
+
+}
+
+@media (min-width: 640px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 610px;
+      }
+
+}
+
+@media (min-width: 720px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 690px;
+      }
+
+}
+
+@media (min-width: 768px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 738px;
+      }
+
+}
+
+@media (min-width: 900px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 870px;
+      }
+
+}
+
+@media (min-width: 1024px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 994px;
+          
+      }
+
+}
+
+@media (min-width: 1200px){
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 1170px;
+      }
+
+}
+
+@media (min-width: 1630px){
+  
+      .benefits-wrap, .commission-section, .why-us-wrap, .faq-section, .contact-us, .app-header  {
+          max-width: 1600px;
+      }
+
+}
+
+
+
 
