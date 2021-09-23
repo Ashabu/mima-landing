@@ -1,5 +1,6 @@
 footer {
     background-color: black;
+    .con-8 {
     display: flex;
     flex-direction: column;
     padding-right: 0;
@@ -43,25 +44,34 @@ footer {
                 }
             }
         }
-    
+    }
 }
 
 @media(min-width: 1420px) {
     footer{
+        .con-8 {
         .footer-bottom {
             max-width: 1420px;
         }
     }
+    }
 }
 @media(min-width: 1200px) {
     footer{
+        .con-8 {
+
+        
         .footer-bottom {
             margin: 40px auto;
         }
     }
+    }
 }
 @media(min-width: 900px) {
     footer{
+        .con-8 {
+
+        
         .footer-bottom {
             display: flex;
             flex-direction: column;
@@ -70,5 +80,6 @@ footer {
             margin: 20px 0 40px;
             max-width: 100%;
         }
+    }
     }
 }
