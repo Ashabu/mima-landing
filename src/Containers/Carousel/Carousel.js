@@ -1,4 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, Fragment } from "react";
+import Carousel from 'react-grid-carousel'
 import './carousel.scss';
 import CarouselCart from "../../Components/Carousel/CarouselCart";
 
@@ -47,48 +48,22 @@ const Testimonials = [
 
 
 
-const cardW = 300;
-let xt = 0;
 
-const Carousel = (props) => {
-    const [clickCount, setCklickCount] = useState(0);
-    const t = document.getElementsByClassName('carousel')
-    useEffect(() => {
-        // console.log('x', t)
-        // for (let x = 0; x < cardW; x++) {
-        //     console.log(x)
-        //     t[0].scrollLeft += x;
-        // }
 
-        let rt = setInterval(() => {
-            xt++;
-            if (xt % cardW === 0) { clearInterval(rt); return }
-            t[0].scrollLeft += xt;
+const Carousels = (props) => {
 
-        }, 50);
-
-    }, [clickCount])
-
-    const fn = (index) => {
-        return cardW * index - (clickCount * cardW);
-    }
-
-    const nextFn = () => {
-        setCklickCount(prev => { return prev + 1 })
-    }
 
     return (
-        <Fragment>
-            <img style={{ width: 60, position: 'absolute', top: 250, right: 450, cursor: 'pointer' }} src='../../Assets/images/arrow.png' alt='' onClick={nextFn} />
-            <div className='carousel'>
-                <div className='carts-wrap'>
-                    {Testimonials.map((item, index) => (
-                        <CarouselCart key={item.id} item={item} index={index} left={fn(index)} />
-                    ))}
-                </div>
-            </div>
-        </Fragment>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <Carousel cols={3} rows={1} gap={10} loop>
+                {Testimonials.map((item, index) => (
+                    <Carousel.Item key={index}>
+                        <CarouselCart item={item} />
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        </div>
     )
 };
 
-export default Carousel;
+export default Carousels

@@ -1,8 +1,7 @@
 import React from "react";
 
 const CarouselCart = (props) => {
-    const { id, title, desc, } = props.item;
-    console.log(props.left)
+    const { title, desc, } = props.item;
 
     return (
         <div className='cart' >

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import AppHeader from './Components/AppHeader/AppHeader';
-import Carousel from './Containers/Carousel/Carousel';
+import Carousels from './Containers/Carousel/Carousel';
 import Benefits from './Components/Benefits/Benefits';
 import Commisions from './Components/Commision/Commisions';
 import WhyUs from './Components/WhyUs/WhyUs';
@@ -16,10 +16,10 @@ const App = () => {
     <div className="App">
 
       <AppHeader />
-      {/* <div className='con-4'>
-        <Carousel />
+      <div className='con-4'>
+        <Carousels />
 
-      </div> */}
+      </div>
       <AffiliateProgram />
       <Benefits />
       <Commisions />
