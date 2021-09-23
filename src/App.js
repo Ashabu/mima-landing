@@ -14,15 +14,14 @@ const App = () => {
 
   return (
     <div className="App">
-
       <AppHeader />
+      <AffiliateProgram />
+      <Benefits />
+      <Commisions />
       <div className='con-4'>
         <Carousels />
 
       </div>
-      <AffiliateProgram />
-      <Benefits />
-      <Commisions />
       <WhyUs />
       <Faq />
       <ContactUs />

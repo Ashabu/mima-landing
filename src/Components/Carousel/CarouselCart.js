@@ -5,8 +5,13 @@ const CarouselCart = (props) => {
 
     return (
         <div className='cart' >
-            <p>{title}</p>
+            <p>
+                <a target='_blank' href = ''>{title}</a>
+                </p>
+            <div className = 'cart-desc'>
             <p>{desc}</p>
+            </div>
+            
 
         </div>
     );

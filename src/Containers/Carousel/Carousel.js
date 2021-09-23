@@ -7,7 +7,7 @@ const Testimonials = [
     {
         id: 1,
         title: 'Lorem Ipsum1',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis turpis orci, sit amet pharetra lorem condimentum in. Nam in placerat leo. Aenean convallis, leo vitae egestas '
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis turpis orci, sit amet pharetra lorem condimentum in. Nam in placerat leo. Aenean convallis, leo vitae egestas, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis turpis orci, sit amet pharetra lorem condimentum in. Nam in placerat leo. Aenean convallis, leo vitae egestas, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis turpis orci, sit amet pharetra lorem condimentum in. Nam in placerat leo. Aenean convallis, leo vitae egestas'
     },
     {
         id: 2,
@@ -55,7 +55,7 @@ const Carousels = (props) => {
 
     return (
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <Carousel cols={3} rows={1} gap={10} loop>
+            <Carousel cols={3} rows={1} gap={20} loop>
                 {Testimonials.map((item, index) => (
                     <Carousel.Item key={index}>
                         <CarouselCart item={item} />

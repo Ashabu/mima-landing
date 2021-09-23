@@ -24,4 +24,39 @@
     color: #ffffff;
     overflow: auto;
     }
+
+    
 } 
+.con-4 {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    .cart {
+        display: grid;
+        grid-gap: 15px;
+        padding: 30px;
+        text-align: center;
+        background: #3b3e40;
+        border-radius: 10px; 
+        color: #ffffff;
+        
+        p{
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                
+                &:hover {
+                    color: #ff7a00;
+                }
+            }
+        }
+        
+    
+        .cart-desc {
+            height: 200px;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                width: 4px;
+              }
+        }
+    }
+}
