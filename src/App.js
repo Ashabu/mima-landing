@@ -7,10 +7,10 @@ import Commisions from './Components/Commision/Commisions';
 import WhyUs from './Components/WhyUs/WhyUs';
 import Faq from './Components/FAQ/Faq';
 import ContactUs from './Components/ContactUs/ContactUs';
+import AffiliateProgram from './Components/AffiliateProgram/AffiliateProgram';
+import AppFooter from './Components/AppFooter/AppFooter';
 
 const App = () => {
-
-
 
   return (
     <div className="App">
@@ -20,27 +20,13 @@ const App = () => {
         <Carousel />
 
       </div> */}
-      <div className='con-1'>
-        <div className='content'>
-          <h1>The official Mima Affiliate program</h1>
-          <p>And 100 Free spins + Secret Daily Bonuses</p>
-          <a href=''>Join now</a>
-        </div>
-      </div>
-      <Benefits/>
-      <Commisions/>
-      <WhyUs/>
-      <Faq/>
-      <ContactUs/>
-      
-      
-      
-      <div className = 'con-8'> 
-       <div className='partners'>
-
-       </div>
-
-      </div>
+      <AffiliateProgram />
+      <Benefits />
+      <Commisions />
+      <WhyUs />
+      <Faq />
+      <ContactUs />
+      <AppFooter />
     </div>
   );
 }
