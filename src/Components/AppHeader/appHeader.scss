@@ -5,13 +5,11 @@ header {
 
     .app-header {
         min-height: 70px;
-        grid-template-columns: .5fr 1fr .5fr;
-        grid-gap: 20px;
-        gap: 20px;
         padding: 0;
-        display: grid;
+        display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 20px;
 
         .app-logo {
             a {
@@ -76,7 +74,8 @@ header {
         }
 
         .app-login-signup {
-
+            display: flex;
+            grid-gap: 20px;
             button {
                height: 40px;
                display: grid;
@@ -135,27 +134,72 @@ header {
 
 
 
-
-
-
-
-
-
-@media (min-width: 1630px) {
+@media (min-width: 1024px) {
     header {
         .app-header {
-            min-height: 100px;
-            padding: 0 40px;
-
             .app-mid-content {
                 .app-menu-content {
                     .app-menu {
-                        grid-gap: 40px;
+                        .app-menu-1 {
+                            .app-menu-item {
+                                a {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+}
 
+@media (min-width: 1200px) {
+    header {
+        .app-header {
+          max-width: 1920px;
+          
+          margin: 0 auto;
+          
+
+          
+          .app-login-signup {
+              display: grid;
+              grid-auto-columns: auto;
+              grid-auto-flow: column;
+              grid-gap: 20px;
+              align-items: center;
+              justify-content: flex-end;
+              button {
+                  &:first-child {
+                      padding: 5px 10px;
+                  }
+              }
+          }
+      }
+      .for-mobile {
+          display: none;
+          align-items: center;
+          justify-content: center;
+      }
+    }
+}
+
+@media (min-width: 1366px) {
+    header {
+        .app-header {
+            .app-mid-content {
+                display: block;
+            }
+          
+            .app-login-signup {
+                button {
+                    &:first-child {
+                        padding: 5px 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -183,73 +227,20 @@ header {
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1630px) {
     header {
         .app-header {
-            .app-mid-content {
-                display: block;
-            }
-          
-            .app-login-signup {
-                button {
-                    &:first-child {
-                        padding: 5px 20px;
+            min-height: 100px;
+            padding: 0 40px;
 
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-      header {
-          .app-header {
-            max-width: 1920px;
-            grid-template-columns: auto auto minmax(0,1fr) auto auto;
-            margin: 0 auto;
-            padding: 0 20px;
-
-            
-            .app-login-signup {
-                display: grid;
-                grid-auto-columns: auto;
-                grid-auto-flow: column;
-                grid-gap: 20px;
-                align-items: center;
-                justify-content: flex-end;
-                button {
-                    &:first-child {
-                        padding: 5px 10px;
-                    }
-                }
-            }
-        }
-
-            .for-mobile {
-                display: none;
-                align-items: center;
-                justify-content: center;
-            }
-          }
-}
-
-@media (min-width: 1024px) {
-    header {
-        .app-header {
             .app-mid-content {
                 .app-menu-content {
                     .app-menu {
-                        .app-menu-1 {
-                            .app-menu-item {
-                                a {
-                                    font-size: 1.4rem;
-                                }
-                            }
-                        }
+                        grid-gap: 40px;
                     }
                 }
             }
         }
+
     }
 }

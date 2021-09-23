@@ -55,6 +55,7 @@ const Carousels = (props) => {
 
     return (
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
+            <h3 className = 'title'>Testimonials</h3>
             <Carousel cols={3} rows={1} gap={20} loop>
                 {Testimonials.map((item, index) => (
                     <Carousel.Item key={index}>
