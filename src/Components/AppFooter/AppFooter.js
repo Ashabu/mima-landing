@@ -2,15 +2,7 @@ import React from "react";
 import './appFooter.scss';
 
 const Partners = [
-    {
-        url: '../../Assets/images/partners/paycryptos_bitcoin.svg'
-    },
-    {
-        url: '../../Assets/images/partners/paypal.svg'
-    },
-    {
-        url: '../../Assets/images/partners/webmoney.svg'
-    }
+    
 
 ]
 

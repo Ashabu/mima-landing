@@ -18,6 +18,13 @@ const ContactUs = () => {
                 <div className='btn'>
                     <button className=''>Send</button>
                 </div>
+                <div style={{color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <span>You can also contact us via E-mail   
+                    <span style={{color: '#ff7a00'}}> affiliates@mima-poker.com </span> or Skype
+                    </span> 
+                    <a target='_blank' href = 'https://join.skype.com/invite/FZdRfNhJwnau'> <img style = {{width: 30}} src="https://img.icons8.com/color/48/000000/skype--v3.png"/> </a>
+                    
+                </div>
             </div>
         </div>
     );

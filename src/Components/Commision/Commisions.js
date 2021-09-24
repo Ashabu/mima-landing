@@ -2,35 +2,14 @@ import React from 'react';
 import './comission.scss';
 import Comission from './Comission';
 
-const commissions = [
-    {
-        title: '25%',
-        desc: '$0-5000',
 
-    },
-    {
-        title: '30%',
-        desc: '$5001-10 000',
-
-    },
-    {
-        title: '35%',
-        desc: '$10 001-25 000',
-
-    },
-    {
-        title: '40%',
-        desc: '$25 000-or more',
-
-    },
-]
 
 const Commisions = (props) => {
     return (
         <div className='con-3'>
             <div className='commission-section'>
                 <div className='aff-content'>
-                    <h3 className='title'>Commision</h3>
+                    <h3 className='title'>Commissions</h3>
 
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>

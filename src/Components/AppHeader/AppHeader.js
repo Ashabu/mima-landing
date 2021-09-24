@@ -51,8 +51,6 @@ const AppHeader = () => {
         setChoseLang(false);
     }
 
-    console.log(currentLang)
-
     return (
         <header>
             <div className='app-header'>
@@ -62,21 +60,6 @@ const AppHeader = () => {
                             <img src='../../Assets/images/logo.svg' alt='logo' />
                         </span>
                     </a>
-                </div>
-                <div className='app-mid-content'>
-                    <div className='app-menu-content'>
-                        <div className='app-menu'>
-                            <div className='app-menu-1'>
-                                {HeaderItems.map((item, index) => (
-                                    <div key={index} className='app-menu-item-wrap'>
-                                        <div className='app-menu-item'>
-                                            <a href={item.href} ><span>{item.title}</span></a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
 
@@ -94,7 +77,7 @@ const AppHeader = () => {
                             <a href={`https://affiliates.mima.games/${Lang.langKey}`} target='_blank' ><img src='../../Assets/images/Login-icon.svg' alt='login' /></a>
                         </span>
                     </div>
-                    <div className='lang' onClick={() => setChoseLang(!choseLang)} tabIndex='1'>
+                    <div className='lang' onClick={() => setChoseLang(false)} tabIndex='1'>
                         <span>
                             <img src={`../../Assets/images/flag-${currentLang[0][1]}.svg`} />
                         </span>

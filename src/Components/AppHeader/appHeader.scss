@@ -31,47 +31,7 @@ header {
             }
         }
 
-        .app-mid-content {
-            display: none;
-            .app-menu-content {
-                .app-menu {
-                    width: 100%;
-                    grid-gap: 10px;
-                    display: grid;
-                    grid-auto-columns: auto;
-                    grid-auto-flow: column;
-                    align-items: center;
-
-                    .app-menu-1 {
-                        padding: 0 2px;
-                        display: flex;
-                        .app-menu-item-wrap {
-                           
-                            margin-right: 40px;
-
-                            .app-menu-item {
-                                a {
-                                    font-style: normal;
-                                    color: #ffffff;
-                                    font-weight: normal;
-                                    font-size: 1.6rem;
-                                    line-height: 1.45;
-                                    font-size: 1rem;
-                                    display: flex;
-                                    align-items: center;
-                                    text-decoration: none;
-                                    cursor: pointer;
-
-                                    &:hover {
-                                        color: #ff7a00;;
-                                    }
-                                }
-                            }
-                        }   
-                    }
-                }
-            }
-        }
+        
 
         .app-login-signup {
             display: none;
@@ -201,25 +161,7 @@ header {
 
 
 
-@media (min-width: 1024px) {
-    header {
-        .app-header {
-            .app-mid-content {
-                .app-menu-content {
-                    .app-menu {
-                        .app-menu-1 {
-                            .app-menu-item {
-                                a {
-                                    font-size: 1.4rem;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+
 
 @media (min-width: 1200px) {
     header {
@@ -246,9 +188,7 @@ header {
 @media (min-width: 1366px) {
     header {
         .app-header {
-            .app-mid-content {
-                display: block;
-            }
+            
           
             .app-login-signup {
                 button {
@@ -261,29 +201,7 @@ header {
     }
 }
 
-@media (min-width: 1420px) {
-    header {
-        .app-header {
 
-            .app-mid-content {
-                .app-menu-content {
-                    .app-menu {
-                        grid-gap: 20px;
-
-                        .app-menu-1 {
-                            .app-menu-item {
-                                a {
-                                    font-size: 1.4rem;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-}
 
 @media (min-width: 1630px) {
     header {
