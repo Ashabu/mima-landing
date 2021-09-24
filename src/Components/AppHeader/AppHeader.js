@@ -83,10 +83,10 @@ const AppHeader = () => {
                 
                 <div className='app-login-signup '>
                     <button>
-                        <span className='btn-text'>Login</span>
+                      <a href = {`https://affiliates.mima.games/${Lang.langKey}`} target='_blank' className='btn-text'> Login</a>
                     </button>
                     <button>
-                        <span className='btn-text'>Sign Up</span>
+                        <a  href={`https://affiliates.mima.games/${Lang.langKey}/Register`} target='_blank' className='btn-text'>Sign Up</a>
                     </button>
                 </div>
                 <div className='lang' onClick={() => setChoseLang(!choseLang)} tabIndex='1'>

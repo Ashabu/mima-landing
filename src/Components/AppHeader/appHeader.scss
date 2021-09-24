@@ -91,7 +91,9 @@ header {
                overflow: hidden;
                transition: all 0.3s;
                cursor: pointer;
-                    
+                  a {
+                      text-decoration: none;
+                  }  
                 &:first-child {
                     border: 2px solid  #40a850;
                     background: transparent;
