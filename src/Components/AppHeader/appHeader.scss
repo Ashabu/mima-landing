@@ -124,6 +124,46 @@ header {
                 }
             }
         }
+        .lang {
+            margin-left: 20px;
+            cursor: pointer;
+            overflow: hidden;
+            width: 35px;
+            height: 35px;
+            &:hover {
+                border: 2px solid #ff7a00;
+            }
+            img {
+                width: 100%;
+            }
+            
+            border-radius: 50%;
+            
+    
+            span {
+                text-transform: uppercase;
+                color: #000;
+                
+            }
+            .selectLang {
+                position: absolute;
+                top: 69px;
+                z-index: 99999;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                border-radius: 50px;
+                overflow: hidden;
+                span {
+                    img {
+                    width: 100%;
+                    }
+                    
+                    border-radius: 50%;
+                }   
+        
+            }
+        }
 
         .for-mobile {
             display: none;

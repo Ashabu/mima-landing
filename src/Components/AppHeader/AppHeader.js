@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import './appHeader.scss';
+import Lang from '../../Services/LanguageService';
+import { Langs } from '../../Constants/Lang';
 
+let langs = [];
 
 const HeaderItems = [
     {
@@ -30,6 +33,26 @@ const HeaderItems = [
 ]
 
 const AppHeader = () => {
+    
+
+    langs = Object.entries(Langs);
+
+    const [choseLang, setChoseLang] = useState(false);
+    const [currentLang, setCurrentLang] = useState(langs);
+
+    const handleChangeLang = () => {
+        console.log(langs)
+        setCurrentLang(lang => {
+            let nextEl = lang[0];
+            lang[0] = lang[1];
+            lang[1] = nextEl;
+            return lang;
+        })
+        Lang.getLang(currentLang[1][1]);
+        setChoseLang(false);
+    }
+
+
     return (
         <header>
             <div className='app-header'>
@@ -55,6 +78,9 @@ const AppHeader = () => {
                         </div>
                     </div>
                 </div>
+                <div style={{display:'flex', alignItems: 'center'}}>
+
+                
                 <div className='app-login-signup '>
                     <button>
                         <span className='btn-text'>Login</span>
@@ -63,6 +89,17 @@ const AppHeader = () => {
                         <span className='btn-text'>Sign Up</span>
                     </button>
                 </div>
+                <div className='lang' onClick={() => setChoseLang(!choseLang)} tabIndex='1'>
+                <span>
+                    <img src = {`../../Assets/images/flag-${Lang.langKey}.svg`} />
+                </span>
+                {choseLang ? <div className='selectLang'  >
+                    <span onClick={handleChangeLang}>
+                    <img src = {`../../Assets/images/flag-${currentLang[0][1]}.svg`} />
+                    </span>
+                </div> : null}
+            </div>
+            </div>
                 <div className='for-mobile'>
                     <span>
                         <img src='../../Assets/images/Login-icon.svg' alt='login' />
