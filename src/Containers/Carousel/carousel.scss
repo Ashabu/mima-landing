@@ -54,6 +54,7 @@
         .cart-desc {
             height: 200px;
             overflow: auto;
+            border-top: 2px solid #ff7a00;
             &::-webkit-scrollbar {
                 width: 4px;
               }

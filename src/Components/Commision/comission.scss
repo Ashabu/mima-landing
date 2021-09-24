@@ -84,6 +84,11 @@
             font-weight: 700;
             line-height: 1;
             color: #ffffff;
+            span {
+              &:first-child {
+                font-size: 2rem;
+              }
+            }
           }
 
           .digits-separator {

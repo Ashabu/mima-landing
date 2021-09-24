@@ -30,26 +30,27 @@ const Commisions = () => {
         <div className='con-3'>
             <div className='commission-section'>
                 <div className='aff-content'>
-                    <h3 className = 'title'>Commision</h3>
-                    
+                    <h3 className='title'>Commision</h3>
+
                 </div>
-                <div style= {{display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}}>
-                <p className = 'title-bot'>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <p className='title-bot'>
                         By teaming up with us, Mima Casino gives you value for every hard earned buck. You can earn up to 60% revenue share or we can give you a CPA deal – whatever is convenient for you.
-                </p>
-                <div className='digits-wrap'>
-                    <div className='digits-item'>
-                        <div className='digits-main'>
-                            <span>60%</span>
+                    </p>
+                    <div className='digits-wrap'>
+                        <div className='digits-item'>
+                            <div className='digits-main'>
+                                <span>up to </span>
+                                <span>60%</span>
+                            </div>
+                            <div className='digits-separator'></div>
+                            <div className='digits-description'></div>
                         </div>
-                        <div className='digits-separator'></div>
-                        <div className='digits-description'></div>
                     </div>
                 </div>
-                </div>
-                
 
-                
+
+
             </div>
         </div>
     );
