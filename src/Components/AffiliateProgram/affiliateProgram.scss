@@ -1,5 +1,5 @@
 .con-1 {
-   
+    
     .baner-wrap {
         padding: 40px 0;
         min-height: 220px;
@@ -49,6 +49,7 @@
             padding-left: 0;
             margin-right: auto;
             margin-left: auto;
+            animation: myAnim 0.5s linear;
 
             a {
                 font-style: normal;
@@ -95,14 +96,42 @@
             }
 
             &.right-animation {
-                position: absolute
-
+                position: absolute;
             }
         }
     }
    
   }
 
+  @keyframes myAnim {
+    0% {
+      bottom: -350px;
+    }
+  
+    100% {
+      bottom: 0;
+    }
+  }
+
+  @keyframes leftAnim {
+      0% {
+          right: -525px;
+      }
+
+      100% {
+          right: -10px;
+      }
+  }
+
+  @keyframes rightAnim {
+    0% {
+        left: -540px;
+    }
+
+    100% {
+        left: -10px;
+    }
+  }
 
 @media (min-width: 375px) {
     .con-1 {

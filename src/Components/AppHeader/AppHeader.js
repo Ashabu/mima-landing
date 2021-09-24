@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './appHeader.scss';
 import Lang from '../../Services/LanguageService';
 import { Langs } from '../../Constants/Lang';
@@ -33,7 +33,7 @@ const HeaderItems = [
 ]
 
 const AppHeader = () => {
-    
+
 
     langs = Object.entries(Langs);
 
@@ -41,17 +41,15 @@ const AppHeader = () => {
     const [currentLang, setCurrentLang] = useState(langs);
 
     const handleChangeLang = () => {
-        console.log(langs)
-        setCurrentLang(lang => {
-            let nextEl = lang[0];
-            lang[0] = lang[1];
-            lang[1] = nextEl;
-            return lang;
+        setCurrentLang(prevState => {
+            return [prevState[1], prevState[0]]
         })
+
         Lang.getLang(currentLang[1][1]);
         setChoseLang(false);
     }
 
+    console.log(currentLang)
 
     return (
         <header>
@@ -78,28 +76,28 @@ const AppHeader = () => {
                         </div>
                     </div>
                 </div>
-                <div style={{display:'flex', alignItems: 'center'}}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
 
-                
-                <div className='app-login-signup '>
-                    <button>
-                      <a href = {`https://affiliates.mima.games/${Lang.langKey}`} target='_blank' className='btn-text'> Login</a>
-                    </button>
-                    <button>
-                        <a  href={`https://affiliates.mima.games/${Lang.langKey}/Register`} target='_blank' className='btn-text'>Sign Up</a>
-                    </button>
+
+                    <div className='app-login-signup '>
+                        <button>
+                            <a href={`https://affiliates.mima.games/${Lang.langKey}`} target='_blank' className='btn-text'> Login</a>
+                        </button>
+                        <button>
+                            <a href={`https://affiliates.mima.games/${Lang.langKey}/Register`} target='_blank' className='btn-text'>Sign Up</a>
+                        </button>
+                    </div>
+                    <div className='lang' onClick={() => setChoseLang(!choseLang)} tabIndex='1'>
+                        <span>
+                            <img src={`../../Assets/images/flag-${currentLang[0][1]}.svg`} />
+                        </span>
+                        {choseLang ? <div className='selectLang'  >
+                            <span onClick={handleChangeLang}>
+                                <img src={`../../Assets/images/flag-${currentLang[1][1]}.svg`} />
+                            </span>
+                        </div> : null}
+                    </div>
                 </div>
-                <div className='lang' onClick={() => setChoseLang(!choseLang)} tabIndex='1'>
-                <span>
-                    <img src = {`../../Assets/images/flag-${Lang.langKey}.svg`} />
-                </span>
-                {choseLang ? <div className='selectLang'  >
-                    <span onClick={handleChangeLang}>
-                    <img src = {`../../Assets/images/flag-${currentLang[0][1]}.svg`} />
-                    </span>
-                </div> : null}
-            </div>
-            </div>
                 <div className='for-mobile'>
                     <span>
                         <img src='../../Assets/images/Login-icon.svg' alt='login' />

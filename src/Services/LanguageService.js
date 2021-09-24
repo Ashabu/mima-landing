@@ -2,67 +2,67 @@
 import axios from 'axios';
 import { Langs } from '../Constants/Lang';
 
-class Lang  {
-    constructor(){
+class Lang {
+    constructor() {
         this.translate = {
-            
-        };     
-        this.langKey = Langs.ENG;    
+
+        };
+        this.langKey = Langs.ENG;
     }
 
-events = [];
+    events = [];
 
 
 
-setLang = (langs) => {
-    this.translate = langs;
+    setLang = (langs) => {
+        this.translate = langs;
 
-}
-getLang = (key, callback) => {
-     axios.get(`http://localhost:9000/Assets/language/${key}.json`).then(res => {
-         this.translate = res.data;
-         for (const e of this.events) {
-             e(key);
-         }
-         this.langKey = key;
+    }
+    getLang = (key, callback) => {
+        axios.get(`http://localhost:9000/Assets/language/${key}.json`).then(res => {
+            this.translate = res.data;
+            for (const e of this.events) {
+                e(key);
+            }
+            this.langKey = key;
 
-         if(callback) callback();
-     })
+            if (callback) callback();
+        })
 
-}
+    }
 
 
-tr =  (key) => {
-    try {
-        if(!key) return null;
+    tr = (key) => {
+        try {
+            if (!key) return null;
 
-        let parts = key.split('.');
-        let value = this.translate;
+            let parts = key.split('.');
+            let value = this.translate;
 
-        for (let part of parts) {
-            value = value[part];
+            for (let part of parts) {
+                value = value[part];
+            }
+
+            value = value || '';
+
+            return value;
         }
-
-        value = value  || '';
-
-        return value;
-    }
-    catch(e) {
-        return "";
-    }
-}
-
-
-subscribe(fn) {
-    this.events.push(fn);
-
-    return {
-        unsubscribe: () => {
-            const index = this.events.indexOf(fn);
-            if (index !== -1) this.events.splice(index, 1);
+        catch (e) {
+            return "";
         }
-    };
-}
+    }
+
+
+    subscribe(fn) {
+        this.events.push(fn);
+
+        return {
+            unsubscribe: () => {
+                const index = this.events.indexOf(fn);
+                if (index !== -1) this.events.splice(index, 1);
+            }
+        };
+    }
 }
 
 
