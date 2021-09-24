@@ -25,7 +25,7 @@ const commissions = [
     },
 ]
 
-const Commisions = () => {
+const Commisions = (props) => {
     return (
         <div className='con-3'>
             <div className='commission-section'>
@@ -48,7 +48,12 @@ const Commisions = () => {
                         </div>
                     </div>
                 </div>
+                <div className='aff-content' style={{ margin: '40px auto 0 auto' }}>
+                    <p>
+                        <a href={`https://affiliates.mima.games/${props.activeLang}/Register`} ><span className="wlc-btn__text">Become a partner</span></a>
+                    </p>
 
+                </div>
 
 
             </div>
