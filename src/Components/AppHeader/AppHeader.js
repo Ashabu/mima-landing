@@ -87,6 +87,11 @@ const AppHeader = () => {
                             <a href={`https://affiliates.mima.games/${Lang.langKey}/Register`} target='_blank' className='btn-text'>Sign Up</a>
                         </button>
                     </div>
+                    <div className='for-mobile'>
+                        <span>
+                            <a href={`https://affiliates.mima.games/${Lang.langKey}`} target='_blank' ><img src='../../Assets/images/Login-icon.svg' alt='login' /></a>
+                        </span>
+                    </div>
                     <div className='lang' onClick={() => setChoseLang(!choseLang)} tabIndex='1'>
                         <span>
                             <img src={`../../Assets/images/flag-${currentLang[0][1]}.svg`} />
@@ -98,11 +103,7 @@ const AppHeader = () => {
                         </div> : null}
                     </div>
                 </div>
-                <div className='for-mobile'>
-                    <span>
-                        <img src='../../Assets/images/Login-icon.svg' alt='login' />
-                    </span>
-                </div>
+
             </div>
         </header>
     );
