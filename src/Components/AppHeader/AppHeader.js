@@ -5,34 +5,36 @@ import { Langs } from '../../Constants/Lang';
 
 let langs = [];
 
-const HeaderItems = [
-    {
-        title: 'Home Page',
-        href: 'https://mima.games/en/'
-    },
-    {
-        title: 'Casino',
-        href: 'https://mima.games/en/'
-    },
-    {
-        title: 'Live Casino',
-        href: 'https://mima.games/en/catalog/livecasino'
-    },
-    {
-        title: 'Promotions',
-        href: 'https://mima.games/en/promotions/'
-    },
-    {
-        title: 'Tournaments',
-        href: 'https://mima.games/en/tournaments/'
-    },
-    {
-        title: 'Contact Us',
-        href: 'https://mima.games/en/contacts/feedback/'
-    },
-]
+
 
 const AppHeader = () => {
+
+    const HeaderItems = [
+        {
+            title: 'Home Page',
+            href: `https://mima.games/${Lang.langKey}/`
+        },
+        {
+            title: 'Casino',
+            href: `https://mima.games/${Lang.langKey}/`
+        },
+        {
+            title: 'Live Casino',
+            href: `https://mima.games/${Lang.langKey}/catalog/livecasino`
+        },
+        {
+            title: 'Promotions',
+            href: `https://mima.games/${Lang.langKey}/promotions/`
+        },
+        {
+            title: 'Tournaments',
+            href: `https://mima.games/${Lang.langKey}/tournaments/`
+        },
+        {
+            title: 'Contact Us',
+            href: `https://mima.games/${Lang.langKey}/contacts/feedback/`
+        },
+    ]
 
 
     langs = Object.entries(Langs);

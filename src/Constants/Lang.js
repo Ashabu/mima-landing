@@ -1,5 +1,5 @@
 export const Langs = {
-    ENG: "eng",
+    ENG: "en",
     RU: "ru",
 
 };
