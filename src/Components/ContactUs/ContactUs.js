@@ -7,7 +7,7 @@ const ContactUs = () => {
         <div className='con-7'>
             <div className='contact-us'>
                 <div className='contact-us-head' >
-                    <h2>Contact Us</h2>
+                    <h3 className = 'title-top'>Contact Us</h3>
                 </div>
                 <div className='contact-us-body'>
                     <input type='text' placeholder='Name' />

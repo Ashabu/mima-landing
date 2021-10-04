@@ -1,5 +1,29 @@
 .App {
 
+  h3 {
+    &.title-top {
+      margin: 20px 0 15px;
+      font-style: normal;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1.45;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    }
+
+    .subtitle-bot {
+      font-style: normal;
+      color: #FFFFFF;
+      font-weight: normal;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      text-align: center;
+  }
+
+
+
   .title {
     font-style: normal;
     color: #fff;
@@ -7,7 +31,6 @@
     font-size: 2.4rem;
     line-height: 1.45;
     text-align: center;
-    text-shadow: 1px 1px 2px #1c1d1e, 0 0 1em #1c1d1e;
   }
 
   .title-bot {
@@ -17,7 +40,6 @@
     font-size: 1.4rem;
     line-height: 1.45;
     text-align: center;
-    text-shadow: 1px 1px 2px #1c1d1e, 0 0 1em #1c1d1e;
 }
 
 
@@ -71,6 +93,28 @@
           max-width: 738px;
       }
 
+    .App {
+      h3 {
+        &.title-top {
+          font-style: normal;
+          color: #FFFFFF;
+          font-weight: bold;
+          font-size: 1.5rem;
+          line-height: 1.45;
+          text-align: center;
+        }
+    }  
+
+    .subtitle-bot {
+      font-style: normal;
+      color: #FFFFFF;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.45;
+      text-align: center;
+    }
+    
+
       .title {
         font-style: normal;
         color: #fff;
@@ -89,6 +133,7 @@
         text-align: start;
       }
 
+}
 }
 
 @media (min-width: 900px){

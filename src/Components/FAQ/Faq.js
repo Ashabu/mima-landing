@@ -74,7 +74,9 @@ const Faq = () => {
         <div className='con-6'>
         <div className='faq-section'>
           <div className='faq-item-wrap'>
-            <div className='faq-header'>FAQ</div>
+            <div className='faq-header'>
+                <h3 className = 'title-top'>faq</h3>
+            </div>
             {FAQ.map((item, index) => (
               <FaqItem key={index} item={item} index = {index}/>
             ))}

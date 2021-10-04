@@ -33,7 +33,7 @@
     .cart {
         display: grid;
         grid-gap: 15px;
-        padding: 30px;
+        padding: 20px;
         text-align: center;
         background: #3b3e40;
         border-radius: 10px; 
@@ -52,7 +52,7 @@
         
     
         .cart-desc {
-            height: 200px;
+            height: 400px;
             overflow: auto;
             border-top: 2px solid #ff7a00;
             &::-webkit-scrollbar {

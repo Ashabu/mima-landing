@@ -9,11 +9,11 @@ const Commisions = (props) => {
         <div className='con-3'>
             <div className='commission-section'>
                 <div className='aff-content'>
-                    <h3 className='title'>Commissions</h3>
+                    <h3 className = 'title-top'>Commission</h3>
 
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                    <p className='title-bot'>
+                    <p className='subtitle-bot' style={{maxWidth: '54ch'}}>
                         By teaming up with us, Mima Casino gives you value for every hard earned buck. You can earn up to 60% revenue share or we can give you a CPA deal – whatever is convenient for you.
                     </p>
                     <div className='digits-wrap'>

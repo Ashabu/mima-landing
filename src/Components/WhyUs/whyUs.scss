@@ -1,6 +1,6 @@
 .con-5 {
     background: #3b3e40;
-    padding: 40px 0;
+    padding: 60px 0;
     background-image: url('../../Assets/images/descritption/tiger.png'), url('../../Assets/images/descritption/pig.png'), url('../../Assets/images/descritption/bg.png');
     background-repeat: no-repeat,no-repeat,no-repeat;
     background-position: left 0 top 130px,right 0 bottom 130px,50%;
@@ -17,6 +17,29 @@
             font-weight: normal;
             font-size: 1.6rem;
             line-height: 1.45;
+            
+
+            .why-us-cart {
+                width: 100%;
+                background-color: #15055b;
+                border-radius: 10px;
+                box-sizing: border-box;
+                margin: 20px;
+                padding: 20px;
+
+                .why-us-cart-title {
+                }
+
+                .why-us-cart-body {
+                    padding: 20px 0;
+                    box-sizing: border-box;
+                    p{ 
+                        margin: auto;
+                    }
+                   
+                }
+            }
+
 
             &:first-child {
                 margin-top: 0;
@@ -28,4 +51,16 @@
             }
         }
     }
+  }
+
+  @media (min-width: 1024px) {
+    .con-5 {
+      
+        .why-us-wrap {
+           
+            .aff-content {
+             
+            }
+        }
+      }
   }

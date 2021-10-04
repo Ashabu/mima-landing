@@ -48,19 +48,35 @@
         align-self: baseline;
 
         span {
-            font-style: normal;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1rem;
-            line-height: 1.45;
-            display: inline-block;
-            max-width: 20ch;
+          font-style: normal;
+          color: #fff;
+          font-weight: 700;
+          font-size: 0.64rem;
+          line-height: 1.45;
+          display: inline-block;
+          max-width: 21ch;
           }
         }
       }
   }
 
+@media (min-width: 768px){
+  .con-2 {
+  .benefits-wrap {
+    .item-content {
+      align-self: baseline;
 
+      span {
+        font-style: normal;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 1.45;
+        }
+      }
+  }
+}
+}
 
 @media (min-width: 1024px){
     .con-2 {
@@ -81,6 +97,23 @@
 
 }
 
+@media (min-width: 1200px){
+  .con-2 {
+  .benefits-wrap {
+    .item-content {
+      align-self: baseline;
+
+      span {
+        font-style: normal;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.87rem;
+        line-height: 1.45;
+        }
+      }
+  }
+}
+}
 
 
 @media (min-width: 1630px){
