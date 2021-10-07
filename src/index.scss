@@ -8,6 +8,10 @@ body {
   
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Inter';
   src: url('./Assets/fonts/Inter-Regular.ttf') format("woff");

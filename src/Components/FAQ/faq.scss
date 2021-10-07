@@ -51,6 +51,8 @@
                 flex-grow: 1;
                 padding-right: 15px;
                 transition: all 0.3s;
+                color: #ffffff;
+                font-weight: bold;
             }
 
             .arrow-icon {
@@ -77,9 +79,78 @@
             padding-left: 15px;
             padding-right: 15px;
             transition: all 0.5s;
+
+            .faq-item-desc {
+                font-style: normal;
+                color: #FFFFFF;
+                font-weight: normal;
+                font-size: 1.4rem;
+                line-height: 1.45;
+                border-top: 2px solid #FFFFFF;
+                padding: 15px 0;
+            }
         }
     }
   }
 }
 
+}
+
+
+@media (min-width: 375px){
+    .con-6 {
+        .faq-section {
+            .faq-item-wrap {
+                .faq-item {
+                    .faq-item-row {
+                        .faq-item-header{
+                            font-style: normal;
+                            color: #FFFFFF;
+                            font-weight: normal;
+                            font-size: 0.9rem;
+                            line-height: 1.45;
+                        }
+                    }
+                    .faq-content {
+                        .faq-item-desc {
+                            font-style: normal;
+                            color: #FFFFFF;
+                            font-weight: normal;
+                            font-size: 0.9em;
+                            line-height: 1.45;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .con-6 {
+        .faq-section {
+            .faq-item-wrap {
+                .faq-item {
+                    .faq-item-row {
+                        .faq-item-header{
+                            font-style: normal;
+                            color: #FFFFFF;
+                            font-weight: normal;
+                            font-size: 1rem;
+                            line-height: 1.45;
+                        }
+                    }
+                    .faq-content {
+                        .faq-item-desc {
+                            font-style: normal;
+                            color: #FFFFFF;
+                            font-weight: normal;
+                            font-size: 1rem;
+                            line-height: 1.45;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

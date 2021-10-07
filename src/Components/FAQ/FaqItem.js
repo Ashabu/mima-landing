@@ -32,7 +32,7 @@ const FaqItem = (props) => {
                 </div>
             </div>
             <div className='faq-content' style={active? contentOpen : contentClosed }>
-                <div style={{borderTop: '2px solid #FFFFFF', paddingTop: 15, paddingBottom: 15}}>
+                <div className = 'faq-item-desc'>
                     {desc}
                 </div>
             </div>

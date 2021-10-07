@@ -9,9 +9,9 @@ const AffiliateProgram = () => {
                     <img src='../../Assets/images/baner/banner-aff-back.jpg' />
                 </div>
                 <div className='afiliate-animate'>
-                    <div className='title'> The official Mima Affiliate program</div>
+                    <div className='baner-title'> The official Mima Affiliate program</div>
                     <div></div>
-                   
+                    <div className="baner-subtitle">And 100 Free spins + Secret Daily Bonuses</div>
                     <a href="https://affiliates.mima.games/en/Register" >Join now</a>
                 </div>
                 <div className='baner left-animation'>

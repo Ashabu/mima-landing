@@ -11,36 +11,37 @@
       text-transform: uppercase;
       text-align: center;
     }
-    }
 
-    .subtitle-bot {
-      font-style: normal;
-      color: #FFFFFF;
-      font-weight: normal;
-      font-size: 0.9rem;
-      line-height: 1.45;
-      text-align: center;
+  }
+
+  .subtitle-bot {
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    text-align: center;
   }
 
 
 
-  .title {
+  .baner-title {
     font-style: normal;
     color: #fff;
     font-weight: bold;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     line-height: 1.45;
     text-align: center;
   }
 
-  .title-bot {
+  .baner-subtitle {
     font-style: normal;
     color: #fff;
     font-weight: normal;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     line-height: 1.45;
     text-align: center;
-}
+  }
 
 
   
@@ -115,22 +116,22 @@
     }
     
 
-      .title {
+      .baner-title {
         font-style: normal;
         color: #fff;
         font-weight: bold;
-        font-size: 3.6rem;
+        font-size: 2.25rem;
         line-height: 1.45;
-        text-align: start;
+        text-align: center
       }
 
-      .title-bot {
+        .baner-subtitle {
         font-style: normal;
         color: #fff;
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 1rem;
         line-height: 1.45;
-        text-align: start;
+        text-align: center
       }
 
 }
@@ -155,23 +156,24 @@
       .benefits-wrap, .commission-section, .why-us-wrap, .afiliate-animate,.con-8  {
           max-width: 1170px;
       }
-      .title {
-        font-style: normal;
-        color: #fff;
-        font-weight: bold;
-        font-size: 4.8rem;
-        line-height: 1.45;
+      .App {
+        .baner-title {
+          font-style: normal;
+          color: #fff;
+          font-weight: bold;
+          font-size: 3rem;
+          line-height: 1.45;
       }
 
-      .title-bot {
-        font-style: normal;
-        color: #fff;
-        font-weight: bold;
-        font-size: 2.4rem;
-        line-height: 1.45;
-        text-align: center;
+      .baner-subtitle {
+          font-style: normal;
+          color: #fff;
+          font-weight: bold;
+          font-size: 1.5rem;
+          line-height: 1.45;
+          text-align: center;
       }
-
+  }
 }
 
 @media (min-width: 1630px){
