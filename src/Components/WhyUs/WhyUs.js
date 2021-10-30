@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './whyUs.scss';
 import WhyUsItem from './WhyUsItem';
+import Marketing from '../../Services/MarketinToolsServices';
+import AppLoader from '../AppLoader/AppLoader';
+
 
 const WhYUS = [
     {
@@ -19,18 +22,45 @@ const WhYUS = [
 
     },
 ]
+// /style ={{backgroundImage = `url(${s})`}}
 
 const WhyUs = () => {
+    const [marketingTool, setMarketingTool] = useState();
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        GetMarketingTools();
+    }, [])
+
+    const GetMarketingTools = () => {
+        Marketing.GetMarketingTools().then(res => {
+            if (res.data.success) {
+                setMarketingTool(res.data.data.tools);
+                setIsLoaded(true);
+            } else {
+                setIsLoaded(true);
+            }
+
+        }).catch(e => {
+            console.log(e)
+        })
+    };
+
     return (
-        <div className='con-5'>
-            <div className='why-us-wrap'>
-                <div className = 'aff-content'>
-                    {WhYUS.map((item, i) => (
-                        <WhyUsItem key = {i} data = {item} />
-                    ))}
+
+        <div className='con-5' style={{ backgroundImage: `url(${marketingTool?.[0].images?.[0].imgUrl})` }} >
+            {isLoaded ?
+                <div className='why-us-wrap'>
+                    <div className='aff-content'>
+                        {marketingTool?.map((item, i) => (
+                            <WhyUsItem key={i} data={item} />
+                        ))}
+                    </div>
                 </div>
-            </div>
+                :
+                <AppLoader />}
         </div>
+
     );
 };
 

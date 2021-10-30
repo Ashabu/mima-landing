@@ -1,6 +1,7 @@
 .con-3 {
     background-image: url('../../Assets/images/commission-backgrond.png');
     padding:  40px 0;
+    background-size: cover;
     .commission-section {
       max-width: 1170px;
       margin: auto;
@@ -60,7 +61,7 @@
 
       .digits-wrap {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-gap: 20px;
         justify-content: center;
 
@@ -70,6 +71,7 @@
           padding: 30px;
           text-align: center;
           border-radius: 10px;
+          background-color: #0b5636ad;
 
           .digits-main {
             font-size: 4.2rem;
@@ -106,7 +108,7 @@
     .con-3 {
         .commission-section {
             .digits-wrap { 
-                grid-template-columns: repeat(1,1fr);
+                grid-template-columns: repeat(4,1fr);
             }
         }
     }
@@ -119,7 +121,7 @@
     .con-3 {
         .commission-section {
             .digits-wrap { 
-                grid-template-columns: repeat(1,315px);
+                grid-template-columns: repeat(4,315px);
             }
         }
     }

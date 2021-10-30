@@ -1,45 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './benefits.scss';
 import Benefit from './Benefit';
+import BenefitsServices from '../../Services/BenefitsServices';
+import AppLoader from '../AppLoader/AppLoader';
 
-const benefits = [
-    {
-      imgUrl: '../../Assets/images/benefits/support.svg',
-      content: 'Professional support round the clock'
-    },
-    {
-      imgUrl: '../../Assets/images/benefits/lifetime.svg',
-      content: 'Lifetime revenue'
-    },
-    {
-      imgUrl: '../../Assets/images/benefits/coins.svg',
-      content: 'No hidden costs'
-    },
-    {
-      imgUrl: '../../Assets/images/benefits/star.svg',
-      content: 'The best stats breakdown in the business'
-    },
-    {
-      imgUrl: '../../Assets/images/benefits/ribbon.svg',
-      content: 'No Negative Carryover (Yay)'
-    },
-    {
-      imgUrl: '../../Assets/images/benefits/discount.svg',
-      content: 'Industry leading commission'
-    },
-  ]
+
 
 
 const Benefits = () => {
-    return (
-        <div className = 'con-2'>
-            <div className = 'benefits-wrap'>
-                {benefits.map((item, index) => (
-                    <Benefit key={index} benefit={item} />
-                ))}
-            </div>
+  const [benefits, setBenefits] = useState();
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    GetBenefit();
+  }, []);
+
+  const GetBenefit = () => {
+    BenefitsServices.GetBenefits().then(res => {
+      if (res.data.success) {
+        setBenefits(res.data.data.benefits);
+        setIsLoaded(true);
+      } else {
+        setIsLoaded(true);
+      }
+    }).catch(e => {
+      console.log('error', e);
+      //setIsLoaded(true);
+  });
+  }
+  return (
+    <div className='con-2'>
+      {isLoaded ?
+        <div className='benefits-wrap'>
+          {benefits?.map((item, index) => (
+            <Benefit key={index} benefit={item} />
+          ))}
         </div>
-    );
+        :
+        <AppLoader />
+      }
+    </div>
+  );
 };
 
 export default Benefits;

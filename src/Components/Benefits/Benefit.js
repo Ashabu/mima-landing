@@ -1,14 +1,14 @@
 import React from "react";
 
 const Benefit = (props) => {
-    const { imgUrl, content } = props.benefit
+    const { benefit} = props
     return (
         <div className = 'benefit-item'>
             <div className = 'item-icon'>
-                <img src = {imgUrl} alt='icon' />
+                <img src = {benefit?.imgUrl} alt='icon' />
             </div>
             <div className = 'item-content'>
-                <span>{content}</span>
+                <span>{benefit?.description.en}</span>
             </div>
         </div>
     );

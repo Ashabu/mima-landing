@@ -1,10 +1,7 @@
 .con-5 {
     background: #3b3e40;
     padding: 60px 0;
-    background-image: url('../../Assets/images/descritption/tiger.png'), url('../../Assets/images/descritption/pig.png'), url('../../Assets/images/descritption/bg.png');
-    background-repeat: no-repeat,no-repeat,no-repeat;
-    background-position: left 0 top 130px,right 0 bottom 130px,50%;
-    background-size: 400px,400px,cover;
+    background-size: cover;
 
     .why-us-wrap {
         margin: 0 auto;
@@ -21,7 +18,7 @@
 
             .why-us-cart {
                 width: 100%;
-                background-color: #15055b;
+                background-color: #0b5636ad;
                 border-radius: 10px;
                 box-sizing: border-box;
                 margin: 20px;

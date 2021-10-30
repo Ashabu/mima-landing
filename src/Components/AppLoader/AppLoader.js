@@ -6,7 +6,6 @@ const AppLoader = () => {
         <div className = 'app-loader-main'>
             <div className = 'app-loader-body'>
                 <div className = 'app-loader-element'>
-
                 </div>
             </div>
             
