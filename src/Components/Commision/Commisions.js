@@ -22,7 +22,6 @@ const GetCommissions = () => {
 
     Commissions.GetCommisions().then(res => {
         if (res.data.success) {
-            console.log(res.data.data)
             setCommissions(res.data.data.commissions[0]);
             setIsLoaded(true);
         } else {
