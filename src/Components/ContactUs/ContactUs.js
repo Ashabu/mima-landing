@@ -1,8 +1,25 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import './contactUs.scss';
+import Links from '../../Services/CommonServices';
 
 
 const ContactUs = () => {
+    const [skypeLink, setSkypeLink] = useState('');
+
+    useEffect(() => {
+        
+        getSkypeLink();
+    }, []);
+    const getSkypeLink = () => {
+        Links.GetLinks().then(res => {
+            if (res.data.success) {
+                setSkypeLink(res.data.data.link[0].description)
+            }
+        })
+        .catch(e => {
+            console.log(e)
+        })
+    }
     return (
         <div className='con-7'>
             <div className='contact-us'>
@@ -22,7 +39,7 @@ const ContactUs = () => {
                     <span>You can also contact us via E-mail   
                     <span style={{color: '#ff7a00'}}> affiliates@mima-poker.com </span> or Skype
                     </span> 
-                    <a target='_blank' href = 'https://join.skype.com/invite/FZdRfNhJwnau'> <img style = {{width: 30}} src="https://img.icons8.com/color/48/000000/skype--v3.png"/> </a>
+                    <a target='_blank' href = {skypeLink}> <img style = {{width: 30}} src="https://img.icons8.com/color/48/000000/skype--v3.png"/> </a>
                     
                 </div>
             </div>

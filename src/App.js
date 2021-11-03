@@ -25,12 +25,12 @@ const App = () => {
     forceUpdate();
   })
 
-  useEffect(() => {
-    Lang.getLang(Lang.langKey);
-    langSubcrie();
+  // useEffect(() => {
+  //   Lang.getLang(Lang.langKey);
+  //   langSubcrie();
 
-    return () => langSubcrie.unsubscribe();
-  }, []);
+  //   return () => langSubcrie.unsubscribe();
+  // }, []);
 
   return (
 

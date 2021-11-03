@@ -1,15 +1,15 @@
 import React from 'react';
 
 const Comission = (props) => {
-    const {title, desc } = props.item;
+    const {percent, range } = props.item;
 
     return (
         <div className = 'digits-item'>
             <div className = 'digits-main'>
-                <span>{title}</span>
+                <span>{percent}</span>
             </div>
             <div className = 'digits-separator'></div>
-            <div className = 'digits-description'>{desc}</div>
+            <div className = 'digits-description'>{range}</div>
         </div>
     );
 };

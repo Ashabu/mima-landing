@@ -20,11 +20,11 @@ const FaqItem = (props) => {
         // a[0].classList.toggle('active')
         // img.classList.toggle('active')
     }
-    const { title, desc } = props.item
+    const { title, description } = props.item
     return (
         <div className = 'faq-item' onClick = {tt}>
             <div className = 'faq-item-row'>
-                <div className = 'faq-item-header'>{title}</div>
+                <div className = 'faq-item-header'>{title['en']}</div>
                 <div className='arrow-icon'>
                     <span>
                         <img className = {active? 'active' : ''} src='../Assets/images/arrow.svg' alt='' />
@@ -33,7 +33,7 @@ const FaqItem = (props) => {
             </div>
             <div className='faq-content' style={active? contentOpen : contentClosed }>
                 <div className = 'faq-item-desc'>
-                    {desc}
+                    {description['en']}
                 </div>
             </div>
         </div>

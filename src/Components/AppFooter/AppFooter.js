@@ -1,21 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './appFooter.scss';
+import Partner from '../../Services/PartnerServices';
 
-const Partners = [
-    
-
-]
 
 const AppFooter = () => {
+    const [skypeLink, setSkypeLink] = useState('');
+    const [partners, setPartners] = useState([]);
+
+    useEffect(() => {
+        
+        getPartners();
+    }, []);
+
+   
+
+
+
+    const getPartners = () => {
+        Partner.GetPartners().then(res => {
+            if (res.data.success) {
+                setPartners(res.data.data.partners);
+            }
+        })
+        .catch(e => {
+            console.log(e)
+        })
+    }
+
     return (
         <footer>
             <div className='con-8'>
                 <div className='footer-top'>
                     <div className='partners'>
                         <div className='partners-wrap'>
-                            {Partners.map((item, index) => (
+                            {partners?.map((item, index) => (
                                 <div className='partner-logo' key={index}>
-                                    <img src={item.url} alt='logo' />
+                                    <a href={item.linkUrl} target='_blank'>
+                                        <img src={item.imgUrl} alt='logo' />
+                                    </a>
                                 </div>
                             ))}
                         </div>

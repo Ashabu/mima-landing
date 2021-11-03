@@ -7,6 +7,7 @@ import Banner from './Banner.js';
 const AffiliateProgram = (props) => {
 
     const [affiliateInfo, setAffiliateInfo] = useState();
+    const [banners, setBanners] = useState()
 
     useEffect(() => {
         GetAffiliateInfo();
@@ -18,6 +19,7 @@ const AffiliateProgram = (props) => {
         Affiliate.GetAffiliateInfos().then(res => {
             if (res.data.success) {
                 setAffiliateInfo(res.data.data.affiliates[0]);
+                setBanners(res.data.data.images)
                 props.onSetLoaded(true);
             } else {
             }
@@ -27,27 +29,26 @@ const AffiliateProgram = (props) => {
         });
     };
 
-    console.log(affiliateInfo?.images.length)
 
     return (
         <div className='con-1'>
             <div className='baner-wrap'>
-                {affiliateInfo?.images.length > 1 ?
+                {banners?.length > 1 ?
                     <Carousel cols={1} rows={1} gap={20} loop autoplay={5000} points={true}>
-                        {affiliateInfo?.images.map((img, index) => (
+                        {banners.map((img, index) => (
                             <Carousel.Item key={index} >
                                 <Banner imgUrl={img.imgUrl} />
                             </Carousel.Item>
                         ))}
                     </Carousel>
                     :
-                    <Banner imgUrl={affiliateInfo?.images[0].imgUrl} />}
+                    <Banner imgUrl={banners?.[0]?.imgUrl} />}
 
 
                 <div className='afiliate-animate1'>
-                    <div className='baner-title'> The official Mima Affiliate program</div>
+                    <div className='baner-title'> {affiliateInfo?.title['en']}</div>
                     <div></div>
-                    <div className="baner-subtitle">And 100 Free spins + Secret Daily Bonuses</div>
+                    <div className="baner-subtitle">{affiliateInfo?.subTitle['en']}</div>
                     <a href="https://affiliates.mima.games/en/Register" >Join now</a>
                 </div>
 
