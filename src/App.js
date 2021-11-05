@@ -40,7 +40,7 @@ const App = () => {
       <AppHeader />
       <AffiliateProgram onSetLoaded={(value) => setIsLoaded(value)} />
       {loaded ? <>
-        <Benefits />
+        {/* <Benefits /> */}
         <Commisions />
         <div className='con-4'>
           <Carousels />

@@ -3,6 +3,7 @@ import './comission.scss';
 import Comission from './Comission';
 import AppLoader from '../AppLoader/AppLoader';
 import Commissions from '../../Services/CommissionsService';
+import Benefits from '../Benefits/Benefits';
  
 
 
@@ -34,7 +35,10 @@ const GetCommissions = () => {
     return (
         
         <div className='con-3' style={{backgroundImage: `url(${commissions?.imgUrl})`}}>
+            
             {isLoaded?
+            <>
+            <Benefits/>
             <div className='commission-section'>
                 <div className='aff-content'>
                     <h3 className = 'title-top'>Commission</h3>
@@ -57,6 +61,7 @@ const GetCommissions = () => {
 
                 </div>
             </div>
+            </>
             : 
         <AppLoader/>}
         </div>
