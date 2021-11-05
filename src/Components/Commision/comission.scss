@@ -14,6 +14,8 @@
         text-align: center;
         color: #ffffff;
 
+       
+
         &:first-child {
           margin-top: 0;
         }
@@ -79,6 +81,7 @@
             font-weight: 700;
             line-height: 1;
             color: #ffffff;
+            text-shadow: 0px 0px 3px #FFFFFF;
             span {
               &:first-child {
                 font-size: 2rem;
@@ -99,6 +102,7 @@
             font-weight: 700;
             font-size: 1.4rem;
             line-height: 1.45;
+            text-shadow: 0px 0px 3px #FFFFFF;
           }
         }
       }

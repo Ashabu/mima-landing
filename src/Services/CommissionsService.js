@@ -10,7 +10,6 @@ class Commissions {
     }
 
     EditCommision = async (id, data) => {
-        console.log(id, data)
         return await axios.put(`${globalConfig.api_URL}/editCommission/${id}`, data);
     };
 

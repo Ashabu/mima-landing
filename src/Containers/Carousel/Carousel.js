@@ -39,7 +39,7 @@ const Carousels = () => {
            { isLoaded?
            <>
             <h3 className = 'title-top'>Testimonials</h3>
-            <Carousel cols={3} rows={1} gap={20} loop autoplay = {5000} points={true}>
+            <Carousel cols={3} rows={1}  loop autoplay = {5000} points={true}>
                 {testimonials.map((item, index) => (
                     <Carousel.Item key={index}>
                         <CarouselCart item={item} />

@@ -50,13 +50,29 @@
     }
   }
 
+  @media (min-width: 375px) {
+    .con-5 {
+      
+        .why-us-wrap {
+           
+            .aff-content {
+                .why-us-cart {
+                    margin: 20px 0;
+                }
+            }
+        }
+      }
+  }
+
   @media (min-width: 1024px) {
     .con-5 {
       
         .why-us-wrap {
            
             .aff-content {
-             
+                .why-us-cart {
+                    margin: 20px;
+                }
             }
         }
       }

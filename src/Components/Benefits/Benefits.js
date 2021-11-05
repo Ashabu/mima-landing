@@ -33,7 +33,7 @@ const Benefits = () => {
       {isLoaded ?
         <div className='benefits-wrap'>
           {benefits?.map((item, index) => (
-            <Benefit key={index} benefit={item} />
+            <Benefit key={index} benefit={item}  />
           ))}
         </div>
         :
